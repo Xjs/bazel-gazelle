@@ -82,6 +82,8 @@ def _gazelle_runner_impl(ctx):
         ctx.executable.gazelle,
         go.go,
     ])
+    print("hello")
+    print(ctx.executable.gazelle)
     return [DefaultInfo(
         files = depset([out_file]),
         runfiles = runfiles,
@@ -133,8 +135,6 @@ def gazelle(name, **kwargs):
         tags = ["manual"],
         **kwargs
     )
-    print("hello")
-    print(runner_name)
     native.sh_binary(
         name = name,
         srcs = [runner_name],
