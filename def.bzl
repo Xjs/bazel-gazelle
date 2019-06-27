@@ -83,7 +83,7 @@ def _gazelle_runner_impl(ctx):
         go.go,
     ])
     print("hello")
-    print(ctx.executable.gazelle)
+    print(out_file)
     return [DefaultInfo(
         files = depset([out_file]),
         runfiles = runfiles,
