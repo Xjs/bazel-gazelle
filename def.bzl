@@ -133,6 +133,7 @@ def gazelle(name, **kwargs):
         tags = ["manual"],
         **kwargs
     )
+    print("hello")
     print(runner_name)
     native.sh_binary(
         name = name,
