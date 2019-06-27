@@ -83,9 +83,7 @@ def _gazelle_runner_impl(ctx):
         go.go,
     ])
     print("hello")
-    print(depset([out_file]))
-    print(runfiles)
-    print(out_file)
+    print(ctx.attr.command)
     return [DefaultInfo(
         files = depset([out_file]),
         runfiles = runfiles,
